@@ -1,0 +1,48 @@
+<html dir="rtl" lang="fa-IR">
+
+<head>
+    <meta charset="utf-8">
+    <title>append-prepend-text</title>
+    <script src="jquery-core/jquery-core-2011.min.js"></script>
+    <script>
+        $(function(){
+            $("p.para").live("click" , function(){
+//                alert('it work');
+                var value = '<p class="blue">this is test</p>';
+                $(this).after(value);
+            });
+            $("p.blue").live("click" , function(){
+                var value = '<p class="red">this is test</p>';
+                $(this).after(value);
+            });
+            $("p.red").live("click" , function(){
+                var value = '<p class="green">this is test</p>';
+                $(this).after(value);
+            });
+            $("p.green").live("click" , function(){
+                var value = '<p class="para">this is test</p>';
+                $(this).after(value);
+            });
+        })
+    </script>
+    <style>
+        .black{
+            color: black;
+        }
+        .green{
+            color: greenyellow;
+        }
+        .red{
+            color: red;
+        }
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="para">this is test</p>
+</body>
+
+</html>

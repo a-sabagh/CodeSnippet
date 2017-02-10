@@ -1,0 +1,90 @@
+<html dir="rtl" lang="fa-IR">
+
+<head>
+    <meta charset="utf-8">
+    <title>append-prepend-text</title>
+    <script src="jquery-core/jquery-core-2011.min.js"></script>
+    <script>
+        $(function () {
+            $("input.add-below").live("click" , function(){
+//---------------------------------------------------------------------------
+              var value = '<tr>';
+              value += '<td><input type="text" name="src" /></td>';
+              value += '<td><input type="text" name="link" /></td>';
+              value += '<td><input type="text" name="title" /></td>';
+              value += '<td><input type="text" name="alt" /></td>';
+              value += '<td><input type="button" class="add-up control" value="افزودن به بالا" /><br>';
+              value += '<input class="control" type="submit" name="submit" value="ارسال" /><br>';
+              value += '<input type="button" class="remove control" value="حذف"><br>';
+              value += '<input type="button" class="add-below control" value="افزودن به پایین" /></td>';
+              value += '</tr>';          
+//---------------------------------------------------------------------------
+                $(this).parent().parent().after(value);
+            });
+            $("input.add-up").live("click" , function(){
+//---------------------------------------------------------------------------
+              var value = '<tr>';
+              value += '<td><input type="text" name="src" /></td>';
+              value += '<td><input type="text" name="link" /></td>';
+              value += '<td><input type="text" name="title" /></td>';
+              value += '<td><input type="text" name="alt" /></td>';
+              value += '<td><input type="button" class="add-up control" value="افزودن به بالا" /><br>';
+              value += '<input class="control" type="submit" name="submit" value="ارسال" /><br>';
+              value += '<input type="button" class="remove control" value="حذف"><br>';
+              value += '<input type="button" class="add-below control" value="افزودن به پایین" /></td>';
+              value += '</tr>';  
+//---------------------------------------------------------------------------
+                $(this).parent().parent().before(value);
+            });
+            $("input.remove").live("click" , function(){
+                $(this).parent().parent().remove();        
+            });
+        })
+    </script>
+    <style>
+        .control {
+            width: 105px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <form action="" method="post">
+            <table>
+                <tr>
+                    <th>آدرس عکس</th>
+                    <th>لینک عکس</th>
+                    <th>تیتر عکس</th>
+                    <th>جایگزین عکس</th>
+                    <th>کنترل ها</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="src" />
+                    </td>
+                    <td>
+                        <input type="text" name="link" />
+                    </td>
+                    <td>
+                        <input type="text" name="title" />
+                    </td>
+                    <td>
+                        <input type="text" name="alt" />
+                    </td>
+                    <td>
+                        <input type="button" class="add-up control" value="افزودن به بالا" />
+                        <br>
+                        <input class="control" type="submit" name="submit" value="ارسال" />
+                        <br>
+                        <input type="button" class="remove control" value="حذف">
+                        <br>
+                        <input type="button" class="add-below control" value="افزودن به پایین" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
