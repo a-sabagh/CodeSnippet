@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>AcordianTabMenu</title>
+    </head>
+    <body>
+        <ul class="accordian">
+            <li>
+                <div class="accrodian-list">
+                    <h3>list1</h3>
+                </div><!--.accrodian-list-->
+                <div class="accordian-panel">
+                    <p>content1</p>
+                </div><!--.accordian-panel-->
+            </li>
+            <li>
+                <div class="accrodian-list">
+                    <h3>list2</h3>
+                </div><!--.accrodian-list-->
+                <div class="accordian-panel">
+                    <p>content2</p>
+                </div><!--.accordian-panel-->
+            </li>
+            <li>
+                <div class="accrodian-list">
+                    <h3>list3</h3>
+                </div><!--.accrodian-list-->
+                <div class="accordian-panel">
+                    <p>content3</p>
+                </div><!--.accordian-panel-->
+            </li>
+        </ul><!--.accordian-->
+        <script type="text/javascript" src="jquery-1.9.0.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(".accordian li").removeClass("active");//remove active class from all li
+                $(".accordian li .accordian-panel").hide();//hide all accordian panel
+                $(".accordian li").click(function () {
+                    var content = $(this).children("div.accordian-panel");//define content as accordian panel of clicked li
+                    if (content.is(":hidden")) {
+                        $(this).addClass("active").children(".accordian-panel").slideDown(403);//if content hidden slidedown
+                    } else {
+                        $(this).removeClass("active").children("div.accordian-panel").slideUp(400);//if content show slideup
+                    }//else if
+                });//click
+            });//jQuery
+        </script>
+    </body>
+</html>
