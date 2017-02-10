@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cross-clean-input</title>
+</head>
+<body>
+    <form method="GET" action="#">
+        <input type="search" name="s" placeholder="Search">
+        <span class="cross-clean"></span>
+        <input type="submit" value="">
+    </form><!--.mobile-nav-search-->
+<script src="../jquery-core/jquery-1.9.0.min.js"></script>
+<script type="text/javascript">
+    $(".cross-clean").click(function(){
+        $(this).prev().val("").focus();
+    });
+</script>
+</body>
+</html>
