@@ -1,0 +1,52 @@
+<html lang="fa" dir="rtl">
+    <head>
+        <title>featured-tab</title>
+        <meta charset="utf-8" >
+        <script src="script/jquery-1.11.3.min.js"></script>
+        <script>
+            $(function(){
+//                addClass
+//                removeClass
+//                hide
+//                show
+//                add
+//                remove
+                $(".featured-tab-container .tab-menu-content").hide(); //hide all contenet of tab
+                $("ul.featured-head li:first").addClass("active");//show first tab is active
+                $(".featured-tab-container .tab-menu-content:first").show();//show first content is of tab
+                $("ul.featured-head li").click(function(){
+                    var attr = $(this).find("a").attr("href");
+                    $(".featured-tab-container .tab-menu-content").hide(); //hide all contenet of tab
+                    $("ul.featured-head li").removeClass("active");//remove all active class
+                    $(this).addClass("active");//active the tab that you click this
+                    $(attr).fadeIn();//fade in the content of tab you click on this
+                    return false;
+                });
+            });
+        </script>
+        <style type="text/css">
+            .container{
+                width: 960px;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+                <div class="container">
+                    <div class="featured-tab-container">
+                        <ul class="featured-head">
+                            <li><a href="#featured-tab1">جدیدترین ها</a></li>
+                            <li><a href="#featured-tab2">پربازدیدترین ها</a></li>
+                        </ul><!--.featured-head-->
+                        <div class="featured-tab-container">
+                            <div class="tab-menu-content" id="featured-tab1">
+                                <p>یک متن نمونه برای تب اول</p>
+                            </div><!--#featured-tab-menu-->
+                            <div class="tab-menu-content" id="featured-tab2">
+                                <p>یک متن نمونه برای تب دوم</p>
+                            </div><!--.featured-tab-menu-->
+                        </div><!--#featured-tab-container-->
+                    </div><!--.featured-tab-->
+                </div><!--.container-->
+    </body>
+</html>

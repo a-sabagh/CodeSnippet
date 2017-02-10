@@ -1,0 +1,95 @@
+/*
+Author: آنلاینر
+Author URI: http://onliner.ir
+*/
+
+/* Reset HTML Elements *//* ----------------------------------------- */
+*, html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, label, fieldset, input, p, blockquote, th, td {
+	margin:0;
+	padding:0
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+	padding: 0;
+	margin: 0;
+}
+fieldset, img {
+	border:0
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-style:normal;
+	font-weight:normal
+}
+ol, ul, li {
+	list-style:none
+}
+caption, th {
+	text-align:right
+}
+q:before, q:after {
+	content:''
+}
+* {
+	outline: none;
+}
+strong {
+	font-weight: bold
+}
+em {
+	font-style: italic
+}
+a img {
+	border:none
+}
+/*-General Styles------------------------------------------*/
+body {
+	font-family: tahoma;	
+	font-size: 12px;
+	line-height: 18px;
+	direction: rtl;
+	text-align: right;
+	color: #222;
+}
+a, a:visited {
+	text-decoration:none;
+	color: #000;
+}
+a:hover {
+	text-decoration:none;
+}
+a:active {
+	border: none;
+	border: 0;
+}
+p {
+	line-height:18px;
+	direction: rtl;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+p a, p a:visited {
+	text-decoration:none;
+	color: #000;
+	text-shadow: 0 0 1px #999;
+}
+.clear {
+	clear: both;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'b koodak','b mitra', arial, tahoma;
+}
+.alignright {
+	display:inline;
+	float:right;
+	text-align:right;
+}
+.alignleft {
+	display:inline;
+	float:left;
+	text-align:left;
+}
+.aligncenter {
+	display:block;
+	margin:0 auto;
+	text-align:center;
+}
