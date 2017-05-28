@@ -1,0 +1,30 @@
+.grid-item{
+	width: 25%;
+}
+@media screen and (max-width: 992px){
+	.grid-item{
+		width: 33.333%;
+	}
+}
+@media screen and (max-width: 768px){
+	.grid-item{
+		width: 50%;
+	}
+}
+@media screen and (max-width: 480px){
+	.grid-item{
+		width: 100%;
+	}
+}
+
+
+/*
+* should be deleted when snnipet called in your project
+*/
+
+.red{background: red; height: 100px;}
+.green{background: green; height: 120px;}
+.blue{background: blue; height: 140px;}
+.yellow{background: yellow; height: 90px;}
+.orange{background: orange; height: 110px;}
+.aqua{background: aqua; height: 140px;}

@@ -1,0 +1,13 @@
+function masonry_init(){
+    if(typeof Masonry !== "undefined"){
+        var container = document.querySelector('.grid');
+        var masonry = new Masonry(container, {
+            itemSelector: '.grid-item'
+        });
+    }
+}
+jQuery(document).ready(function($){
+    if($(".grid").length){
+        window.onload = masonry_init;
+    }
+});
