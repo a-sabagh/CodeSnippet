@@ -1,0 +1,7 @@
+body{height: 2000px;}
+.f-nav{ z-index: 9999; position: fixed; left: 0; top: 0; width: 100%; background: orange; transition: all 1s;} /* this make our menu fixed top */
+.nav { height: 42px; transition: .2s all;}
+.nav ul { list-style: none; }
+.nav ul li{float: left; margin-top: 6px; padding: 6px;}
+.nav ul li:first-child{ padding-left: 0;}
+.nav ul li a:hover{ text-decoration: underline;}
