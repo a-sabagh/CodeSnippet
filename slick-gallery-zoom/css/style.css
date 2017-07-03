@@ -1,0 +1,59 @@
+.slider-nav-thumbnails .slick-slide {
+	opacity: 0.5;
+}
+
+.slider-nav-thumbnails .slick-slide.slick-active {
+	opacity: 1;
+  background: green;
+}
+.zoom-slider{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	max-width: 62.5rem;
+	overflow: hidden;
+	overflow-x: hidden;
+}
+.row{
+	width: 80%;
+	margin: 30px auto;
+}
+
+/*
+====================
+image full size
+====================
+*/
+
+.slider figure{
+    margin: 0;
+}
+
+/*
+====================
+magnifire lense size
+====================
+*/
+
+@media screen and (min-width: 1200px){
+	.magnify > .magnify-lens {
+	  width: 250px !important;
+	  height: 250px !important;
+	}
+}
+
+@media screen and (max-width: 1200px) and (min-width:480px){
+	.magnify > .magnify-lens {
+	  width: 200px !important;
+	  height: 200px !important;
+	}
+}
+
+@media screen and (max-width: 480px){
+	.magnify > .magnify-lens {
+	  width: 150px !important;
+	  height: 150px !important;
+	}
+}
