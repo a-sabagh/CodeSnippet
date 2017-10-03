@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fa-IR">
+	<head>
+		<title>persian date picker</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/persian.datepicker.css"/>
+		<script src="js/jquery.js"></script>
+		<script src="js/persian.date.js"></script>
+		<script src="js/persian.datepicker.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".example1").pDatepicker({
+					format: "YYYY/MM/DD",
+				});
+				$(".example1").pDatepicker("setDate",[1392,12,1,11,11]);
+				// pDatepicker("setDate",[1392,12,1,11,11] )
+			});
+		</script>
+	</head>
+	<body>
+		<input type="text" class="example1" />
+	</body>
+</html>
