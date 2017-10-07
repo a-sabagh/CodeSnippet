@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>(data source type instanse)jquery.data-table</title>    
+    <link rel="stylesheet" href="assets/css/jquery.dataTables.css">
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/jquery.dataTables.js"></script>
+    <script>
+        function user(first_name,last_name,email,mobile){
+            this.firstname = first_name,
+            this.lastname = last_name,
+            this.email = email,
+            this.mobile = mobile
+        }
+        $(document).ready( function () {
+            var data = [
+                new user("abolfazl","sabagh","a.sabagh72@gmail.com","09361823146"),
+                new user("reza","sabagh","reza.sabagh@gmail.com","098765432")
+            ];
+            $('#table_id').DataTable({
+                data:data,
+                columns:[
+                    {data:"firstname"},
+                    {data:"lastname"},
+                    {data:"email"},
+                    {data:"mobile"}
+                ]
+            });
+        });
+    </script>
+    <title>jquery.data-table(data source type array)</title>
+</head>
+<body>
+    <table id="table_id" class="display">
+        <thead>
+            <tr>
+                <th>first name</th>
+                <th>last name</th>
+                <th>email</th>
+                <th>mobile</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+</html>

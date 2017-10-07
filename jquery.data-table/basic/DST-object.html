@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>(data source type object)jquery.data-table</title>    
+    <link rel="stylesheet" href="assets/css/jquery.dataTables.css">
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/jquery.dataTables.js"></script>
+    <script>
+    $(document).ready( function () {
+        var data = [
+            {
+                "username":"admin",
+                "first name":"abolfazl",
+                "last name":"sabagh",
+                "access group":"admin",
+                "email":"a.sabagh72@gmail.com",
+            },
+            {
+                "username":"reza",
+                "first name":"reza",
+                "last name":"sabagh",
+                "access group":"clerk",
+                "email":"reza.sabagh3613@gmail.com"
+            }
+        ]
+        $('#table_id').DataTable({
+            data:data,
+            columns: [
+                {data: "username"},
+                {data: "first name"},
+                {data: "last name"},
+                {data: "access group"},
+                {data: "email"}
+            ]
+        });
+    } );
+    </script>
+    <title>jquery.data-table(data source type array)</title>
+</head>
+<body>
+    <table id="table_id" class="display">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Access group</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+</html>

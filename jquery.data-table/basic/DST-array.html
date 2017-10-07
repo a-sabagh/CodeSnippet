@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>(data source type array)jquery.data-table</title>    
+    <link rel="stylesheet" href="assets/css/jquery.dataTables.css">
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/jquery.dataTables.js"></script>
+    <script>
+    $(document).ready( function () {
+        var data = [
+            [
+                "Tiger Nixon",
+                "System Architect",
+                "Edinburgh",
+                "5421",
+                "2011/04/25",
+                "$3,120"
+            ],
+            [
+                "Garrett Winters",
+                "Director",
+                "Edinburgh",
+                "8422",
+                "2011/07/25",
+                "$5,300"
+            ]
+        ]
+        $('#table_id').DataTable({
+            data:data
+        });
+    } );
+    </script>
+</head>
+<body>
+    <table id="table_id" class="display">
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+                <th>Column 4</th>
+                <th>Column 5</th>
+                <th>Column6</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+</html>
