@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/jquery.dataTables.css">
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready( function () {
+            $('#table_id').DataTable({
+                "language":{
+                    "sEmptyTable":     "هیچ داده ای در جدول وجود ندارد",
+                    "sInfo":           "نمایش _START_ تا _END_ از _TOTAL_ رکورد",
+                    "sInfoEmpty":      "نمایش 0 تا 0 از 0 رکورد",
+                    "sInfoFiltered":   "(فیلتر شده از _MAX_ رکورد)",
+                    "sInfoPostFix":    "",
+                    "sInfoThousands":  ",",
+                    "sLengthMenu":     "نمایش _MENU_ رکورد",
+                    "sLoadingRecords": "در حال بارگزاری...",
+                    "sProcessing":     "در حال پردازش...",
+                    "sSearch":         "جستجو:",
+                    "sZeroRecords":    "رکوردی با این مشخصات پیدا نشد",
+                    "oPaginate": {
+                        "sFirst":    "ابتدا",
+                        "sLast":     "انتها",
+                        "sNext":     "بعدی",
+                        "sPrevious": "قبلی"
+                    },
+                    "oAria": {
+                        "sSortAscending":  ": فعال سازی نمایش به صورت صعودی",
+                        "sSortDescending": ": فعال سازی نمایش به صورت نزولی"
+                    }
+                }
+            });
+        } );
+    </script>
+    <title>(فارسی)jquery.data-table</title>
+</head>
+<body>
+    <table id="table_id" class="display">
+        <thead>
+            <tr>
+                <th>ستون یک</th>
+                <th>ستون دو</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                ‍   <td>ردیف یک ستون یک</td>
+                <td>ردیف یک ستون دو</td>
+            </tr>
+            <tr>
+                <td>ردیف دو ستون یک</td>
+                <td>ردیف ستون دو</td>
+            </tr>
+
+            <tr>
+                <td>ردیف دو ستون یک</td>
+                <td>ردیف دو ستون دو</td>
+            </tr>
+
+            <tr>
+                <td>ردیف سه ستون یک</td>
+                <td>ردیف سه ستون دو</td>
+            </tr>
+
+            <tr>
+                <td>ردیف سه ستون یک</td>
+                <td>ردیف سه ستون دو</td>
+            </tr>
+
+            <tr>
+                <td>ردیف چهار ستون یک</td>
+                <td>ردیف چهار ستون دو</td>
+            </tr>
+
+            <tr>
+                <td>ردیف پنج ستون یک</td>
+                <td>ردیف پنج ستون دو</td>
+            </tr>
+
+            <tr>
+                <td>ردیف شش ستون یک</td>
+                <td>ردیف شش ستون دو</td>
+            </tr>
+
+            <tr>
+                <td>ردیف هفت ستون یک</td>
+                <td>ردیف هفت ستون دو</td>
+            </tr>
+
+            <tr>
+                <td>ردیف هشت ستون یک</td>
+                <td>ردیف هشت ستون دو</td>
+            </tr>
+            <tr>
+                <td>ردیف نه ستون یک</td>
+                <td>ردیف نه ستون دو</td>
+            </tr>
+
+            <tr>
+                <td>ردیف ده ستون یک</td>
+                <td>ردیف ده ستون دو</td>
+            </tr>
+
+            <tr>
+                <td>ردیف یازده ستون یک</td>
+                <td>ردیف یازده ستون دو</td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>ستون یک</th>
+                <th>ستون دو</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
