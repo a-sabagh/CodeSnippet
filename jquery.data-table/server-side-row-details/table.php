@@ -5,9 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/jquery.dataTables.css">
+    <style>
+    .details-control::before{
+        content: "+";
+        display: block;
+        text-align:center;
+    }
+    .details .details-control::before{content: "-"}
+    .details-control{ cursor: pointer; }
+    </style>
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/jquery.dataTables.js"></script>
     <script>
+    /*
+    * show child row for each element row on click
+    * you can use ajax to show content by using row information
+    */ 
     function format ( d ) {
     return 'Full name: '+d.first_name+' '+d.last_name+'<br>'+
         'Salary: '+d.salary+'<br>'+
@@ -40,7 +53,7 @@
             var tr = $(this).closest('tr');
             var row = dt.row( tr );
             var idx = $.inArray( tr.attr('id'), detailRows );
-    
+            
             if ( row.child.isShown() ) {
                 tr.removeClass( 'details' );
                 row.child.hide();
