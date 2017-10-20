@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="stylesheet" type="text/css" href="nestable.css">
+    <title>جی کوئری nestable</title>
+</head>
+<body>
+    <h1>جی کوئری Nestable راست چین</h1>
+        <div class="dd" id="nestable">
+            <ol class="dd-list">
+                <li class="dd-item" data-id="1">
+                    <div class="dd-handle">آیتم 1</div>
+                </li>
+                <li class="dd-item" data-id="2">
+                    <div class="dd-handle">آیتم 2</div>
+                </li>
+                <li class="dd-item" data-id="15">
+                    <div class="dd-handle">آیتم 3</div>
+                    <ol class="dd-list">
+                        <li class="dd-item" data-id="4"><div class="dd-handle">آیتم 4</div></li>
+                        <li class="dd-item" data-id="5"><div class="dd-handle">آیتم 5</div></li>
+                        <li class="dd-item" data-id="6"><div class="dd-handle">آیتم 6</div></li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+    <p><strong>خروجی Serialised</strong></p>
+    <textarea id="nestable-output"></textarea>
+<script src="jquery.js"></script>
+<script src="jquery.nestable.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
