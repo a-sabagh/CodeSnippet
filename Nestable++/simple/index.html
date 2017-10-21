@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="stylesheet" type="text/css" href="nestable.css">
+    <title>Nestable++</title>
+</head>
+<body>
+    <h1>Nestable++</h1>
+    <div id="add-list-item">
+        <h3>add new list item:</h3>
+        <form action="">
+            <label>name: </label><input type="text" class="name" value="">   
+            <input  type="submit" class="add" value="add">
+        </form>    
+    </div><!--#add-list-item-->
+    <div id="edit-list-item">
+        <h3>edit list item:</h3>
+        <form action="">
+            <label>name: </label><input type="text" name="id" value="">
+            <input type="submit" class="edit" name="edit-list-item" value="edit" >
+        </form> 
+    </div><!--#edit-list-item-->
+    <br><hr>
+        <div class="dd" id="nestable">
+            <ol class="dd-list">
+                <li class="dd-item" data-id="1" data-name="name1">
+                    <div class="dd-handle">Item 1</div>
+                    <span class="action-button edit-list-item">Edit</span>
+                    <span class="action-button remove-list-item">Remove</span>
+                </li>
+                <li class="dd-item" data-id="2" data-name="name2">
+                    <div class="dd-handle">Item 2</div>
+                    <span class="action-button edit-list-item">Edit</span>
+                    <span class="action-button remove-list-item">Remove</span>
+                </li>
+                <li class="dd-item" data-id="15" data-name="name3">
+                    <div class="dd-handle">Item 3</div>
+                    <span class="action-button edit-list-item">Edit</span>
+                    <span class="action-button remove-list-item">Remove</span>
+                    <ol class="dd-list">
+                        <li class="dd-item" data-id="4" data-name="name4">
+                            <div class="dd-handle">Item 4</div>
+                            <span class="action-button edit-list-item">Edit</span>
+                            <span class="action-button remove-list-item">Remove</span>
+                        </li>
+                        <li class="dd-item" data-id="5" data-name="name5">
+                            <div class="dd-handle">Item 5</div>
+                            <span class="action-button edit-list-item">Edit</span>
+                            <span class="action-button remove-list-item">Remove</span>
+                        </li>
+                        <li class="dd-item" data-id="6" data-name="name6">
+                            <div class="dd-handle">Item 6</div>
+                            <span class="action-button edit-list-item">Edit</span>
+                            <span class="action-button remove-list-item">Remove</span>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+    <p><strong>Serialised Output (per list)</strong></p>
+    <textarea id="nestable-output"></textarea>
+<script src="jquery.js"></script>
+<script src="jquery.nestable.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
