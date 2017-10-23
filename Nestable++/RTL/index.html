@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="stylesheet" type="text/css" href="nestable.css">
+    <title>Nestable++(فارسی راست چین)</title>
+</head>
+<body>
+    <h1>Nestable++(فارسی راست چین)</h1>
+    <div id="add-list-item">
+        <h3>افزودن آیتم: </h3>
+        <form action="">
+            <input type="hidden" class="max-id" value="6">
+            <label>نام: </label><input type="text" class="name" value="">   
+            <input  type="submit" class="add" value="افزودن">
+        </form>    
+    </div><!--#add-list-item-->
+    <div id="edit-list-item">
+        <h3>ویرایش آیتم: </h3>
+        <form action="">
+            <input type="hidden" class="id" value="">
+            <label>نام: </label><input type="text" class="name" name="name" value="">
+            <input type="submit" class="edit" name="edit-list-item" value="ویرایش" >
+        </form> 
+    </div><!--#edit-list-item-->
+    <br><hr>
+        <div class="dd" id="nestable">
+            <ol class="dd-list">
+                <li class="dd-item" data-id="1" data-name="name1">
+                    <div class="dd-handle">آیتم 1</div>
+                    <span class="action-button edit-list-item">ویرایش</span>
+                    <span class="action-button remove-list-item">حذف</span>
+                </li>
+                <li class="dd-item" data-id="2" data-name="name2">
+                    <div class="dd-handle">آیتم 2</div>
+                    <span class="action-button edit-list-item">ویرایش</span>
+                    <span class="action-button remove-list-item">حذف</span>
+                </li>
+                <li class="dd-item" data-id="3" data-name="name3">
+                    <div class="dd-handle">آیتم 3</div>
+                    <span class="action-button edit-list-item">ویرایش</span>
+                    <span class="action-button remove-list-item">حذف</span>
+                    <ol class="dd-list">
+                        <li class="dd-item" data-id="4" data-name="name4">
+                            <div class="dd-handle">آیتم 4</div>
+                            <span class="action-button edit-list-item">ویرایش</span>
+                            <span class="action-button remove-list-item">حذف</span>
+                        </li>
+                        <li class="dd-item" data-id="5" data-name="name5">
+                            <div class="dd-handle">آیتم 5</div>
+                            <span class="action-button edit-list-item">ویرایش</span>
+                            <span class="action-button remove-list-item">حذف</span>
+                        </li>
+                        <li class="dd-item" data-id="6" data-name="name6">
+                            <div class="dd-handle">آیتم 6</div>
+                            <span class="action-button edit-list-item">ویرایش</span>
+                            <span class="action-button remove-list-item">حذف</span>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+    <p><strong>خروجی لیست آیتم ها:‌</strong></p>
+    <textarea id="nestable-output"></textarea>
+<script src="jquery.js"></script>
+<script src="jquery.nestable.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
