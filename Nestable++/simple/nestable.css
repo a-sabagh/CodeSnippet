@@ -176,9 +176,12 @@
     cursor: pointer;
 }
 .remove-list-item{
-    right: -60px
+    right: -65px;
 }
 .edit-list-item{
-    right: -97px;
+    right: -105px;
+}
+#edit-list-item{
+    display: none;
 }
 
