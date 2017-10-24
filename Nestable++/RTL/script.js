@@ -11,9 +11,9 @@ var add_new_list_item = function(){
     var name = $("#add-list-item .name").val();
     $("#add-list-item .max-id").val(id);
     var list_item = '<li class="dd-item" data-id="' + id + '" data-name="' + name + '">\n\
-                    <div class="dd-handle">Item ' + id + '</div>\n\
-                    <span class="action-button edit-list-item">Edit</span>\n\
-                    <span class="action-button remove-list-item">Remove</span>\n\
+                    <div class="dd-handle">آیتم ' + id + '</div>\n\
+                    <span class="action-button edit-list-item">ویرایش</span>\n\
+                    <span class="action-button remove-list-item">حذف</span>\n\
                     </li>';
     $("div.dd > ol.dd-list").append(list_item);
     updateOutput($('#nestable').nestable());
