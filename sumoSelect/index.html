@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="sumoselect.css">
+    <script src="jquery.js"></script>
+    <script src="jquery.sumoselect.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".sumoselect").SumoSelect({
+                search: true,
+                searchText: 'جستجو',
+                placeholder: 'انتخاب کنید',
+                captionFormat:'{0} مورد انتخاب شد',
+                captionFormatAllSelected:'همه {0} مورد انتخاب شد',
+                selectAll: true,
+                locale: ['تایید', 'لغو', 'انتخاب همه موارد']
+            });
+        });
+    </script>
+    <title>sumo select</title>
+</head>
+<body>
+    <select multiple="multiple" name="somename" class="sumoselect">
+        <option value="volvo">ولوو</option>
+        <option selected="" value="saab">ساب</option>
+        <option selected="" value="mercedes">مرسدس</option>
+        <option value="audi">آودی</option>
+    </select>
+    <br><br><hr><br>
+    <select name="somename" class="sumoselect">
+        <option value="volvo">ولوو</option>
+        <option value="saab">ساب</option>
+        <option value="mercedes">مرسدس</option>
+        <option value="audi">آودی</option>
+    </select>
+</body>
+</html>
