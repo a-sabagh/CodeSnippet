@@ -16,19 +16,33 @@
                 captionFormat:'{0} مورد انتخاب شد',
                 captionFormatAllSelected:'همه {0} مورد انتخاب شد',
                 selectAll: true,
-                locale: ['تایید', 'لغو', 'انتخاب همه موارد']
+                locale: ['تایید', 'لغو', 'انتخاب همه موارد'],
+                
             });
+            var MySelect = $('.sumoselect')[0].sumo;
+
+            // MySelect.selectItem(2);
+            // MySelect.selectItem('saab');
+            // MySelect.unSelectItem(2);
+            // MySelect.unSelectItem('saab');
+
+            $(".clear").on("click" , function(){ MySelect.unSelectAll(); });
+            $(".select-all").on("click" , function(){ MySelect.selectAll(); });
+            $(".submit").click(function(){ console.log($(".sumoselect1").val()); });
         });
     </script>
     <title>sumo select</title>
 </head>
 <body>
-    <select multiple="multiple" name="somename" class="sumoselect">
+    <select multiple="multiple" name="somename" class="sumoselect sumoselect1">
         <option value="volvo">ولوو</option>
-        <option selected="" value="saab">ساب</option>
-        <option selected="" value="mercedes">مرسدس</option>
+        <option value="saab">ساب</option>
+        <option value="mercedes">مرسدس</option>
         <option value="audi">آودی</option>
     </select>
+    <p><a href="#" class="submit">submit</a></p>
+    <p><a href="#" class="clear">clear</a></p>
+    <p><a href="#" class="select-all">selectAll</a></p>
     <br><br><hr><br>
     <select name="somename" class="sumoselect">
         <option value="volvo">ولوو</option>
