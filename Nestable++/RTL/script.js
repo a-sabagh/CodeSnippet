@@ -37,7 +37,7 @@ var update_list_item = function(){
 var remove_list_item = function(target){
     target = target.closest("li");
     var parent = target.closest("ol");
-    var confirmation = confirm("Do you want to Delete list item by id " + target.data("id") + " with all subitem");
+    var confirmation = confirm("آیا قصد حذف آیتم  " + target.data("id") + " به همراه تمامی زیر آیتم ها را دارید؟");
     if(confirmation){
         target.remove();
     }
