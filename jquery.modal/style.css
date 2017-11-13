@@ -2,8 +2,8 @@
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 80px; /* Location of the box */
+    z-index: 9999; /* Sit on top */
+    padding-top: 10%; /* Location of the box */
     right: 0;
     left: 0;
     top: 0;
@@ -38,11 +38,7 @@
     font-weight: bold;
 }
 
-.modal-body ,
-.modal-footer ,
-.modal-header {
-    padding: 2px 16px;}
-}
+.modal-body,.modal-footer,.modal-header { padding: 2px 16px; }
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
