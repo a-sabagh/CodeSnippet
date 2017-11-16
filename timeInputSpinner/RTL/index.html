@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+    <head>
+        <title>jQuery TimingField Plugin Demo</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+        <link href="css/rtl.bootstrap.css" type="text/css" rel="stylesheet" media="screen" />
+        <link href="css/timingfield.css" type="text/css" rel="stylesheet" media="screen" />
+    </head>
+    <body style="padding: 30px";>
+
+        <input type="text" class="timing" value="19631" />
+
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/timingfield.js"></script>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+		$(".timing").timingfield({
+		  maxHour:        23,
+		  width:          350,
+		  hoursText:      'ساعت',
+		  minutesText:    'دقیقه',
+		  secondsText:    'ثانیه'
+		});
+        });
+        </script>
+    </body>
+</html>
