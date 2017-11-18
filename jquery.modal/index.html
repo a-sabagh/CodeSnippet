@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+<head>
+    <title>jquery.modal</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <h2>کلیک کنید تا modal باز شود</h2>
+
+    <!-- Trigger/Open The Modal -->
+    <button class="modal-button" data-modal="myModal">کلیک کنید</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-close">&times;</span>
+                <h2>هدینگ</h2>
+            </div>
+            <div class="modal-body">
+                <p>بدنه</p>
+            </div>
+            <div class="modal-footer">
+                <h3>فوتر</h3>
+            </div>
+        </div>
+
+    </div>
+    <script src="jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
