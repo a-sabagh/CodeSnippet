@@ -1,9 +1,10 @@
 body{padding: 20px;}
-.rng-file-browse{ height: 40px; position: relative;}
+.rng-file-browse{ height: 40px; position: relative; margin: 10px auto; }
 .rng-file-browse .file-holder{
     float: right;
     border-radius: 5px 0 0 5px;
     border: 1px solid #ccc;
+    border-right: 0;
     height: 100%;
     width: 85%;
     text-align: left;
@@ -13,7 +14,6 @@ body{padding: 20px;}
 .rng-file-browse .file-label{
     float: right;
     border-radius: 0 5px 5px 0;
-    border-left: 0;
     height: 100%;
     width: 15%;
 }
