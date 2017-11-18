@@ -1,0 +1,39 @@
+body{padding: 20px;}
+.rng-file-browse{ height: 40px; position: relative;}
+.rng-file-browse .file-holder{
+    float: right;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ccc;
+    height: 100%;
+    width: 85%;
+    text-align: left;
+    padding-left: 30px;
+    direction: ltr;
+}
+.rng-file-browse .file-label{
+    float: right;
+    border-radius: 0 5px 5px 0;
+    border-left: 0;
+    height: 100%;
+    width: 15%;
+}
+.rng-file-browse .clear-file{
+    font-weight: normal;
+    font-size: 18px;
+    position: absolute;
+    left: 15px;
+    top: 7px;
+    cursor: pointer;
+}
+@media screen and (max-width: 992px) and (min-width: 768px){
+    .rng-file-browse .file-holder{ width: 75%; }
+    .rng-file-browse .btn{ width: 25%; }
+}
+@media screen and (max-width: 767px) and (min-width: 480px){
+    .rng-file-browse .file-holder{ width: 70%; }
+    .rng-file-browse .btn{ width: 30%; }
+}
+@media screen and (max-width: 480px){
+    .rng-file-browse .file-holder{ width: 65%; }
+    .rng-file-browse .btn{ width: 35%; }
+}
