@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>prettyPhoto</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" />
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>
+	<script>
+		function onPictureChanged(){
+			$(".twitter").empty();
+			$(".facebook").empty();
+		}
+		$(document).ready(function(){
+			$("a[rel^='prettyPhoto']").prettyPhoto({
+				 changepicturecallback: onPictureChanged,
+			});
+		});
+	</script>
+</head>
+<body style="text-align: center;padding: 100px;">
+	<h2>PrettyPhoto</h2>
+	<div class="clearfix">
+		<a href="images/fullscreen/1.jpg" rel="prettyPhoto[gallery1]" title="You can add caption to pictures. You can addcaption to pictures. You can add caption to pictures.">
+			<img src="images/thumbnails/t_1.jpg" width="60" height="60" alt="Red round shape" />
+		</a>
+		<a href="images/fullscreen/2.jpg" rel="prettyPhoto[gallery1]">
+			<img src="images/thumbnails/t_2.jpg" width="60" height="60" alt="Nice building" />
+		</a>
+		<a href="images/fullscreen/3.jpg" rel="prettyPhoto[gallery1]">
+			<img src="images/thumbnails/t_3.jpg" width="60" height="60" alt="Fire!" />
+		</a>
+		<a href="images/fullscreen/4.jpg" rel="prettyPhoto[gallery1]">
+			<img src="images/thumbnails/t_4.jpg" width="60" height="60" alt="Rock cdivmbing" />
+		</a>
+		<a href="images/fullscreen/5.jpg" rel="prettyPhoto[gallery1]">
+			<img src="images/thumbnails/t_5.jpg" width="60" height="60" alt="Fly kite, fly!" />
+		</a>
+		<a href="images/fullscreen/6.jpg" rel="prettyPhoto[gallery1]">
+			<img src="images/thumbnails/t_2.jpg" width="60" height="60" alt="Nice building" />
+		</a>
+	</div>
+</body>
+</html>
