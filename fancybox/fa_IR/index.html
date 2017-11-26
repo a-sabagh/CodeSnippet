@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+<head>
+	<title>fancybox</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
+</head>
+<body style="text-align: center;padding: 100px;">
+	<h2>fancybox</h2>
+	<a href="images/fullscreen/1.jpg" data-fancybox="group" data-caption="Caption #1">
+		<img src="images/thumbnails/t_1.jpg" alt="" />
+	</a>
+	<a href="images/fullscreen/2.jpg" data-fancybox="group" data-caption="Caption #2">
+		<img src="images/thumbnails/t_2.jpg" alt="" />
+	</a>
+	<a href="images/fullscreen/3.jpg" data-fancybox="group" data-caption="Caption #2">
+		<img src="images/thumbnails/t_3.jpg" alt="" />
+	</a>
+	<a href="images/fullscreen/4.jpg" data-fancybox="group" data-caption="Caption #2">
+		<img src="images/thumbnails/t_4.jpg" alt="" />
+	</a>
+	<a href="images/fullscreen/5.jpg" data-fancybox="group" data-caption="Caption #2">
+		<img src="images/thumbnails/t_5.jpg" alt="" />
+	</a>
+	<a href="images/fullscreen/6.jpg" data-fancybox="group" data-caption="Caption #2">
+		<img src="images/thumbnails/t_6.jpg" alt="" />
+	</a>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.fancybox.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('[data-fancybox]').fancybox({
+			protect : true,
+			buttons : [
+			'slideShow',
+			'fullScreen',
+			// 'thumbs',
+			// 'share',
+	        'download',
+	        'zoom',
+	        'close'
+        ],
+        lang : 'fa',
+	    i18n : {
+	        'fa' : {
+	            CLOSE       : 'بستن',
+	            NEXT        : 'بعدی',
+	            PREV        : 'قبلی',
+	            ERROR       : 'درخواست شما برای بارگزاری ناموفق بود. <br/> لطفا مجدد تلاش کنید.',
+	            PLAY_START  : 'شروع نمایش',
+	            PLAY_STOP   : 'مکث در نمایش',
+	            FULL_SCREEN : 'تمام صفحه',
+	            THUMBS      : 'تصاویر بند انگشتی',
+	            DOWNLOAD    : 'دانلود',
+	            SHARE       : 'اشتراک گذاری',
+	            ZOOM        : 'بزرگنمایی'
+	        	}
+	    	},
+    	});
+	});
+</script>
+</body>
+</html>
