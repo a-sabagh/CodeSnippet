@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gallery swipbox</title>
+	<link rel="stylesheet" type="text/css" href="css/swipebox.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.swipebox.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".swipebox").swipebox();
+		});
+	</script>
+</head>
+<body style="text-align: center;">
+	<h1>tow gallery swipbox call with one function and seprated with relation</h1>
+	<h2>gallery 1 swipbox</h2>
+	<!-- Gallery 1 -->
+	<a rel="gallery-1" href="images/big/image1.jpg" class="swipebox">
+		<img src="images/small/image1.jpg" alt="image">
+	</a>
+	<a rel="gallery-1" href="images/big/image2.jpg" class="swipebox">
+		<img src="images/small/image2.jpg" alt="image">
+	</a>
+	<br>
+	<h2>gallery 2 swipbox</h2>
+	<!-- Gallery 2 -->
+	<a rel="gallery-2" href="images/big/image3.jpg" class="swipebox">
+		<img src="images/small/image3.jpg" alt="image">
+	</a>
+	<a rel="gallery-2" href="images/big/image4.jpg" class="swipebox">
+		<img src="images/small/image4.jpg" alt="image">
+	</a>
+</body>
+</html>
