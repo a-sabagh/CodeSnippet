@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jpage</title>
+	<!-- <divnk rel="stylesheet" type="text/css" href="css/jpage.css"> -->
+</head>
+<body>
+	<div class="holder">
+	</div>
+
+	<!-- item container -->
+	<div id="itemContainer">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+		<div>9</div>
+		<div>10</div>
+		<div>11</div>
+		<div>12</div>
+		<div>13</div>
+		<div>14</div>
+		<div>15</div>
+		<div>16</div>
+		<div>17</div>
+		<div>18</div>
+	</div>
+
+	<!-- navigation holder -->
+	<div class="holder">
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jPages.js"></script>
+	<script>
+		/* when document is ready */
+		$(function(){
+			/* initiate plugin */
+			$("div.holder").jPages({
+				containerID : "itemContainer",
+				perPage      : 5,
+				startPage    : 1,
+				startRange   : 1,
+				midRange     : 5,
+				endRange     : 1,
+				first       : "first",
+				previous    : "previous",
+				next        : "next",
+				last        : "last",
+			});
+		});
+	</script>
+</body>
+</html>
