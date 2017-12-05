@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+	<title>select2</title>
+	<meta charset="utf-8">
+	<link href="css/select2.css" rel="stylesheet"/>
+	<style>
+		select{width: 50%;}
+	</style>
+</head>
+<body>
+	<h2>single select</h2>
+	<select class="select2">
+		<option value="one">select one</option>
+		<option value="tow">select tow</option>
+	</select>
+
+	<h2>multiple select</h2>
+	<select class="select2" name="states[]" multiple="multiple">
+		<option value="one">select one</option>
+		<option value="tow">select tow</option>
+	</select>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/select2.js"></script>
+	<script>
+		$(document).ready(function() {
+			$(".select2").select2(); 
+		});
+	</script>
+</body>
+</html>
