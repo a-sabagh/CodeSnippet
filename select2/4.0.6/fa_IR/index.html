@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+<head>
+	<title>select2</title>
+	<meta charset="utf-8">
+	<link href="css/select2.css" rel="stylesheet"/>
+	<style>
+		select{width: 50%;}
+	</style>
+</head>
+<body>
+	<h2>انتخاب تکی:</h2>
+	<select class="select2">
+		<option value="one">مورد اول</option>
+		<option value="tow">مورد دوم</option>
+	</select>
+
+	<h2>انتخاب چند گانه:</h2>
+	<select class="select2" name="states[]" multiple="multiple">
+		<option value="one">مورد اول</option>
+		<option value="tow">مورد دوم</option>
+	</select>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/select2.js"></script>
+	<script src="js/i18n/fa.js"></script>
+	<script>
+		$(document).ready(function() {
+			$(".select2").select2({
+				language : "fa"
+			}); 
+		});
+	</script>
+</body>
+</html>
