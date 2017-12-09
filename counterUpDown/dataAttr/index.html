@@ -1,0 +1,60 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>jQuery Counter.js Examples</title>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.easing.js"></script>
+  <script src="js/counter.min.js"></script>
+</head>
+<body>
+  <div class="header">
+    <h1>jQuery Counter.js Examples</h1>
+  </div>
+  <div class="container">
+    <div id="counter-up"  data-counter-up="1024">0</div>
+    <div id="counter-down" data-counter-down="0">1024</div>
+    <div class="buttons">
+      <button id="trigger">Start counting!</button>
+    </div>
+  </div>
+  <script>
+
+      //Counter Up
+      var counterUp = $("#counter-up");
+      counterUp.counter({
+        autoStart: false,
+        duration: 7000,
+        countTo: counterUp.data("counter-up"),
+        easing: "easeOutCubic",
+        onStart: function() {
+          console.log("counter start");
+        },
+        onComplete: function() {
+          console.log("counter stop");
+        }
+      });
+
+      //Counter Down
+      var counterDown = $("#counter-down");
+      counterDown.counter({
+        autoStart: false,
+        countTo: counterUp.data("counter-down"),
+        duration: 7000,
+        easing: "easeOutCubic",
+        onStart: function() {
+          console.log("counter start");
+        },
+        onComplete: function() {
+          console.log("counter stop");
+        }
+      });
+      
+      $(document).on("click", "button", function(){
+        counterUp.counter("start");
+        counterDown.counter("start");
+      });
+    </script>
+  </body>
+  </html>
