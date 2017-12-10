@@ -1,0 +1,29 @@
+.holder {
+    direction: ltr;
+    margin: 30px auto;
+}
+.holder a {
+    background: white;
+    cursor: pointer;
+    display: inline-block;
+    color: inherit;
+    padding: 5px 12px;
+    direction: ltr;
+    border: 1px solid #ddd;
+    border-right: none;
+}
+.holder a:last-child{
+    border-right: 1px solid #ddd !important;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.holder a:first-child{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.holder a.jp-disabled,
+.holder a.jp-current{
+   pointer-events: none;
+   cursor: default;
+   background: #f1f1f1;
+}
