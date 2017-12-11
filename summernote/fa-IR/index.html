@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>Summernote</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <script src="js/jquery.js"></script> 
+  <script src="js/bootstrap.js"></script>
+  <link href="css/summernote.css" rel="stylesheet">
+  <script src="js/summernote.js"></script>
+  <script src="js/lang/summernote-fa-IR.js"></script>
+</head>
+<body>
+  <textarea id="summernote"><p>شروع کار با ویرایشگر سامر نوت</p></textarea>
+  <script>
+    $(document).ready(function() {
+      $('#summernote').summernote({
+        lang: "fa-IR",
+        height: 400,
+
+       });
+    });
+  </script>
+</body>
+</html>
