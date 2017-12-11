@@ -197,7 +197,7 @@ td,
 th {
   padding: 0;
 }
-* {
+/** {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -207,7 +207,7 @@ th {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
+}*/
 html {
   font-size: 10px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -965,12 +965,12 @@ legend {
   border: 0;
   border-bottom: 1px solid #e5e5e5;
 }
-label {
+/*label {
   display: inline-block;
   max-width: 100%;
   margin-bottom: 5px;
   font-weight: bold;
-}
+}*/
 input[type="search"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
