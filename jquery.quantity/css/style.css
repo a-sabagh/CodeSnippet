@@ -49,6 +49,11 @@ input.rng-quantity{
   width: 30px;
   direction: inherit;
 }
+input.rng-quantity::-webkit-inner-spin-button, 
+input.rng-quantity::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
 .rng-quantity-wrapper {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
