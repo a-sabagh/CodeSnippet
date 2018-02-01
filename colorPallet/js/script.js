@@ -3,7 +3,7 @@ $(document).ready(function(){
     if (label_wrapper.length) {
         var max_label = 5;
         label_wrapper.find(".tt-label").on("click", function () {
-            var label_select = $(".tt-label-wrapper ul .selected").size();
+            var label_select = $(".tt-label-wrapper ul .selected").length;
             var selected = $(this).hasClass("selected");
             if (selected) {
                 $(this).toggleClass("selected");
@@ -29,4 +29,5 @@ $(document).ready(function(){
                 });
             }
         });
-    }});
+    }
+});
