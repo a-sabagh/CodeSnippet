@@ -1,12 +1,12 @@
-.placeholder div{
+.preloader div{
      height:15px;
      width:15px;
      display:inline-block;
      background-color: #9c9c9c;
      border:none;
-     -webkit-animation:placeholder_loader 1.3s linear infinite;
-     -moz-animation:placeholder_loader 1.3s linear infinite;
-     animation:placeholder_loader 1.3s linear infinite;
+     -webkit-animation:preloader_loader 1.3s linear infinite;
+     -moz-animation:preloader_loader 1.3s linear infinite;
+     animation:preloader_loader 1.3s linear infinite;
      -webkit-transform:scale(0.91);
      -moz-transform:scale(0.91);
      transform:scale(0.91);
@@ -15,22 +15,22 @@
 
 Now the animation is set we can change the delay on each of the bars.
 
-.placeholder div:nth-child(1){
+.preloader div:nth-child(1){
      -webkit-animation-delay:0.39s;
      -moz-animation-delay:0.39s;
      animation-delay:0.39s;
 }
-.placeholder div:nth-child(2){
+.preloader div:nth-child(2){
      -webkit-animation-delay:0.52s;
      -moz-animation-delay:0.52s;
      animation-delay:0.52s;
 }
-.placeholder div:nth-child(3){
+.preloader div:nth-child(3){
      -webkit-animation-delay:0.65s;
      -moz-animation-delay:0.65s;
      animation-delay:0.65s;
 }
-@-webkit-keyframes placeholder_loader{
+@-webkit-keyframes preloader_loader{
      0%{
           -webkit-transform:scale(1.2);
           opacity:1
@@ -40,7 +40,7 @@ Now the animation is set we can change the delay on each of the bars.
           opacity:0.1
      }
 }
-@-moz-keyframes placeholder_loader{
+@-moz-keyframes preloader_loader{
      0%{
           -moz-transform:scale(1.2);
           opacity:1
@@ -50,7 +50,7 @@ Now the animation is set we can change the delay on each of the bars.
           opacity:0.1
      }
 }
-@keyframes placeholder_loader{
+@keyframes preloader_loader{
      0%{
           transform:scale(1.2);
           opacity:1
