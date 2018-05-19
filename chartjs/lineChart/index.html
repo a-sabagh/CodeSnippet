@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <title>LineChart</title>
+    <style>
+        .chart-wrapper {
+            width: 40%;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chart-wrapper">
+        <canvas id="myChart"></canvas>
+    </div>
+    <script src="../library/chart.js"></script>
+    <script>
+        var canvas = document.getElementById('myChart');
+        var data = {
+            labels: ["Jan", "Feb", "Mar", "Apr", "May", "June"],
+            datasets: [{
+                label: 'PostViews',
+                data: [12, 19, 4, 5, 6, 3],
+                fill: false,
+                borderColor: 'rgba(255,99,132,1)',
+                lineTension: 0,
+                // borderDash: [5]
+                pointBorderColor: 'rgba(54, 162, 235, 1)',
+                pointBackgroundColor: 'rgba(54, 162, 235, 1)',
+                pointRadius: 3
+            }]
+        };
+        var option = {
+            // showLines: false,
+        };
+        var myChart = new Chart(canvas, {
+            type: 'line',
+            data: data,
+            options: option
+        });
+
+    </script>
+</body>
+
+</html>
