@@ -30,11 +30,22 @@
                 // borderDash: [5]
                 pointBorderColor: 'rgba(54, 162, 235, 1)',
                 pointBackgroundColor: 'rgba(54, 162, 235, 1)',
-                pointRadius: 3
+                pointRadius: 3,
             }]
         };
-        var option = {
-            // showLines: false,
+        option = {
+            scales: {
+                yAxes: [{
+                    gridLines: {
+                        display: false
+                    },
+                }],
+                xAxes: [{
+                    gridLines: {
+                        display: false
+                    },
+                }]
+            }
         };
         var myChart = new Chart(canvas, {
             type: 'line',
