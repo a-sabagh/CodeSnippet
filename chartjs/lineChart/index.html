@@ -36,16 +36,19 @@
         option = {
             scales: {
                 yAxes: [{
+                    stacked: true,
                     gridLines: {
-                        display: false
+                        display: false,
                     },
                 }],
                 xAxes: [{
+                    stacked: true,
                     gridLines: {
-                        display: false
+                        display: false,
                     },
                 }]
-            }
+            },
+            // legend: false
         };
         var myChart = new Chart(canvas, {
             type: 'line',
