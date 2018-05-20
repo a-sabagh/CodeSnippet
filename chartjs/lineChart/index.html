@@ -5,11 +5,11 @@
     <meta charset="utf8">
     <title>LineChart</title>
     <style>
-        .chart-wrapper {
-            width: 40%;
-            margin: 100px auto;
-        }
-    </style>
+    .chart-wrapper {
+        width: 40%;
+        margin: 100px auto;
+    }
+</style>
 </head>
 
 <body>
@@ -23,7 +23,7 @@
             labels: ["Jan", "Feb", "Mar", "Apr", "May", "June"],
             datasets: [{
                 label: 'PostViews',
-                data: [12, 19, 4, 5, 6, 3],
+                data: [12, 19, 4, 10, 6, 3],
                 fill: false,
                 borderColor: 'rgba(255,99,132,1)',
                 lineTension: 0,
@@ -46,6 +46,9 @@
                     gridLines: {
                         display: false,
                     },
+                    ticks: {
+                        minRotation: 60
+                    }
                 }]
             },
             // legend: false
