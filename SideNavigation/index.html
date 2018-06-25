@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>side navigation</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="uc-recent-postviewed" class="uc-sidenav">
+		<a href="#" class="uc-close-sidenav" >&times;</a>
+		<ul>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Clients</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</div>
+
+	<!-- Use any element to open the sidenav -->
+	<a href="#" class="uc-open-sidenav">Open</a>
+	<div class="uc-black-window"></div>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".uc-open-sidenav").on('click',function(e){
+				e.preventDefault();
+				$(".uc-sidenav").addClass("open");
+				$(".uc-black-window").show();
+			});
+			$(".uc-close-sidenav").on('click',function(e){
+				e.preventDefault();
+				$(".uc-sidenav").removeClass("open");
+				$(".uc-black-window").hide();
+			});
+		});
+	</script>
+</body>
+</html>
