@@ -2,7 +2,8 @@ function masonry_init(){
     if(typeof Masonry !== "undefined"){
         var container = document.querySelector('.grid');
         var masonry = new Masonry(container, {
-            itemSelector: '.grid-item'
+            itemSelector: '.grid-item',
+             // originLeft: false
         });
     }
 }
