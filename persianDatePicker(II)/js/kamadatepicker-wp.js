@@ -79,7 +79,7 @@ var kamaDatepicker = function (elementID, opt) {
     options.gotoToday = options.gotoToday !== undefined ? options.gotoToday : false;
 
     // create DOM
-    var inputElement = jQuery("#" + elementID);
+    var inputElement = jQuery("." + elementID);
 
     if (inputElement.attr("placeholder") === undefined) {
         inputElement.attr("placeholder", options.placeholder);
