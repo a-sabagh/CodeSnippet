@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery kamaDatepicker Plugin</title>
+	<link rel="stylesheet" type="text/css" href="css/kamadatepicker.css">
+</head>
+<body>
+	<input type="text" id="persian_dp">
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/kamadatepicker.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var dp_options = {
+				nextButtonIcon : "kdp_next",
+				previousButtonIcon : "kdp_prev"
+			};
+			kamaDatepicker('persian_dp',dp_options);
+		});
+	</script>
+</body>
+</html>
