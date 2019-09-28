@@ -18,7 +18,7 @@ $(document).ready(function(){
 			modal.hide();
 		});
 
-		$(".modal").click(function(event) {
+		modal.click(function(event) {
 			var modal_content = $(".modal-content").find("*");
 			var target = $( event.target );
 		    if(!target.is(modal_content)){

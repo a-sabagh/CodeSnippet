@@ -310,15 +310,16 @@
     .datepicker-plot-area .datepicker-header .btn-prev:hover {
       background-color: #eeeeee; }
   .datepicker-plot-area .datepicker-header .btn-next {
-    display: block;
+    display: inline-block;
     width: 15%;
-    float: left; }
+    float: none; }
   .datepicker-plot-area .datepicker-header .btn-switch {
-    display: block;
+    display: inline-block;
     width: 66%;
     margin: 0px 2% 0px 2%;
-    float: left; }
+    float: none; }
   .datepicker-plot-area .datepicker-header .btn-prev {
-    display: block;
+    display: inline-block;
     width: 15%;
-    float: left; }
+    float: none; 
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
 <head>
 	<title>slickSlider fancyBox</title>
 	<meta charset="utf-8">
@@ -39,4 +40,45 @@
 		});
 	</script>
 </body>
+=======
+    <head>
+        <title>slickSlider fancyBox</title>
+        <meta charset="utf-8">
+        <link href="css/jquery.fancybox.css" rel="stylesheet" />
+        <link href="css/slick.css" rel="stylesheet" />
+        <style type="text/css">
+            .container{
+                width: 60%;
+                margin: 50px auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="slider_block">
+                <div class="slider1">
+                    <a data-fancybox href="images/large/slider1.jpg">
+                        <img alt="" src="images/medium/slider1.jpg" />
+                    </a>
+                </div>
+                <div class="slider2">
+                    <a data-fancybox  href="images/large/slider2.jpg">
+                        <img alt="" src="images/medium/slider2.jpg" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.fancybox.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.slider_block').slick({
+                    //rtl:true
+                });
+                //$('[data-fancybox]').fancybox({});
+            });
+        </script>
+    </body>
+>>>>>>> ca15b50b1c78ebfee342d7b87f0092245f50fb43
 </html>
