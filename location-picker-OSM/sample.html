@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Place Autocomplete Address Form</title>
+    <meta charset="utf-8">
+    <style>
+      	#map { height: 400px; width:50%; display: inline-block;}
+    </style>
+
+    <!-- required js-->
+    <script src="src/jquery.min.js"></script>
+		<script src="src/OpenLayers.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+    <script src="src/location-picker.js"></script>
+    <!-- sample init -->
+    <script>
+		$(document).ready(function($){
+      var locationPicker = $('.location-picker').locationPicker({
+        locationChanged : function(data){
+          $('#output').text(JSON.stringify(data));
+        },
+        /* init :{ current_location: true} */
+      });
+    });
+		</script>
+  </head>
+
+  <body>
+  	<div class="container">
+  	  <h2>Location Picker demo</h2>
+      <div id="map" data-type='map'></div>
+  		<textarea id="output" class="form-control" disabled rows="20"></textarea>
+		</div>
+  </body>
+</html>
