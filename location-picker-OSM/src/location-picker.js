@@ -7,7 +7,7 @@ $.fn.locationPicker = function(options) {
         save_el: '[data-type="location-store"]',
         raw_data: false,
         init: {
-            current_location: true
+            currentLocation: true
         }
     }, options)
 
@@ -214,9 +214,15 @@ $.fn.locationPicker = function(options) {
         })
     }
 
+    var validateCordinate = function(lat,long){
+      var validLat = (lat < 90 && lat > -90)? true : false;
+      var validLong = (long < 180 && long > -180)? true : false;
+      return (validLat && validLong);
+    }
+
     var init = function() {
         if (settings.init) {
-            if (settings.init.current_location) {
+            if (settings.init.currentLocation) {
                 // set map to current location
 
                 if (navigator.geolocation) {
@@ -230,7 +236,12 @@ $.fn.locationPicker = function(options) {
             } else if (settings.init.address) {
                 $this.setAddress(settings.init.address)
             } else if (settings.init.location) {
-                $this.setLocation(settings.init.location)
+              console.log(validateCordinate(settings.init.location.lat,settings.init.location.long));
+              if(validateCordinate(settings.init.location.lat,settings.init.location.long)){
+                setMapLocation(settings.init.location.lat,settings.init.location.long);
+              }else{
+                setMapLocation(49.8419505, 24.0315968);
+              }
             }
         }
     }

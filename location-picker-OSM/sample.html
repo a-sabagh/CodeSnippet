@@ -17,10 +17,16 @@
     <script>
 		$(document).ready(function($){
       var locationPicker = $('.location-picker').locationPicker({
+        init: {
+          currentLocation: true,
+          // location: {
+          //   lat: 36.317088700435434,
+          //   long: 59.55504453168812,
+          // }
+        },
         locationChanged : function(data){
           $('#output').text(JSON.stringify(data));
-        },
-        /* init :{ current_location: true} */
+        }
       });
     });
 		</script>
