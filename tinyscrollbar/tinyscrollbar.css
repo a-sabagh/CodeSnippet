@@ -1,0 +1,57 @@
+
+
+/* Tiny Scrollbar */
+
+#scrollbar1 {
+	width: 520px;
+	margin: 20px 0 10px;
+}
+
+#scrollbar1 .viewport {
+	width: 500px;
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+}
+
+#scrollbar1 .overview {
+	list-style: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 0;
+	margin: 0;
+}
+
+#scrollbar1 .scrollbar {
+    background: #ececec;
+    position: relative;
+    background-position: 0 0;
+    float: right;
+    width: 2px;
+}
+
+#scrollbar1 .thumb {
+    background:
+    #a4a4a4;
+    height: 20px;
+    width: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: -1px;
+}
+
+#scrollbar1 .disable {
+	display: none;
+}
+
+.noSelect {
+	user-select: none;
+	-o-user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+}
+
