@@ -2,19 +2,19 @@
 
 /* Tiny Scrollbar */
 
-#scrollbar1 {
+.custom-scroll {
 	width: 520px;
 	margin: 20px 0 10px;
 }
 
-#scrollbar1 .viewport {
+.custom-scroll .viewport {
 	width: 500px;
 	height: 200px;
 	overflow: hidden;
 	position: relative;
 }
 
-#scrollbar1 .overview {
+.custom-scroll .overview {
 	list-style: none;
 	position: absolute;
 	left: 0;
@@ -23,7 +23,7 @@
 	margin: 0;
 }
 
-#scrollbar1 .scrollbar {
+.custom-scroll .scrollbar {
     background: #ececec;
     position: relative;
     background-position: 0 0;
@@ -31,7 +31,7 @@
     width: 2px;
 }
 
-#scrollbar1 .thumb {
+.custom-scroll .thumb {
     background:
     #a4a4a4;
     height: 20px;
@@ -43,7 +43,7 @@
     left: -1px;
 }
 
-#scrollbar1 .disable {
+.custom-scroll .disable {
 	display: none;
 }
 
