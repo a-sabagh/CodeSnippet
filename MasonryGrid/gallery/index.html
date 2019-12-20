@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>mansory gallery</title>
+    <style>
+      /* this styles is required*/
+      .grid {
+        width: 90%;
+        margin: auto;
+      }
+      .grid .grid-item {
+        width: 25%;
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 5px;
+      }
+      .grid-item img {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        vertical-align: middle;
+      }
+      @media screen and (max-width: 992px) {
+          .grid .grid-item {
+          width: 33.333%;
+        }
+      }
+      @media screen and (max-width: 768px) {
+          .grid .grid-item {
+          width: 50%;
+        }
+      }
+      @media screen and (max-width: 480px) {
+          .grid .grid-item {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="grid-item">
+        <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="https://preview.ibb.co/mWpE3Q/2.jpg" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="https://preview.ibb.co/mysOxk/3.jpg" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="https://preview.ibb.co/mWpE3Q/2.jpg" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="https://preview.ibb.co/mysOxk/3.jpg" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="" />
+      </div>
+      <div class="grid-item">
+        <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="" />
+      </div>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script src="masonry.pkgd.js"></script>
+    <script>
+      function masonry_init() {
+        if (typeof Masonry !== "undefined") {
+          var container = document.querySelector(".grid");
+          var masonry = new Masonry(container, {
+            itemSelector: ".grid-item"
+            // originLeft: false
+          });
+        }
+      }
+      jQuery(document).ready(function($) {
+        if ($(".grid").length) {
+          window.onload = masonry_init;
+        }
+      });
+    </script>
+  </body>
+</html>
