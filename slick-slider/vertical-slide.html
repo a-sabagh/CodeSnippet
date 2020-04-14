@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>slick-slider</title>
+    <link rel="stylesheet" type="text/css" href="slick.css">
+    <style>
+        .slider {
+            width: 70%;
+            margin: auto;
+        }
+
+        .item {
+            text-align: center;
+            font-size: 30px;
+            color: white;
+            margin: auto;
+            min-height: 200px;
+            max-height: 200px;
+        }
+
+        .red {
+            background: red;
+        }
+
+        .black {
+            background: black;
+        }
+
+        .green {
+            background: green;
+        }
+
+        .blue {
+            background: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <div class="item red">item1</div>
+        <div class="item black">item2</div>
+        <div class="item green">item3</div>
+        <div class="item blue">item4</div>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script src="slick.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider').slick({
+                slidesToShow: 2,
+                vertical: true
+            });
+        });
+    </script>
+</body>
+
+</html>
