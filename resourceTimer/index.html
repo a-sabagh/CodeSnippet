@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timer up</title>
+</head>
+<body>
+    <div class="timer">0 : 0 : 0</div><hr>
+    <button class="start">start</button>
+    <button class="stop">stop</button>
+    <button class="reset">reset</button>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="resource.js"></script>
+    <script>
+        jQuery(document).ready(function($){
+            var container = $(".timer");
+            var timer = Object.create(timerResource);
+            timer.init(container);
+            $('.start').click(()=>{
+                timer.start();
+            });
+            $('.stop').click(()=>{
+                timer.stop();
+            });
+            $('.reset').click(()=>{
+                timer.reset();
+            });
+        });
+    </script>
+</body>
+</html>
