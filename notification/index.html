@@ -1,0 +1,20 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>notification in javascript</title>
+ </head>
+ <body>
+     <script>
+        let notifOptions = {
+            body : "notification body text here",
+            icon : "icon.png",
+        }
+        const sampleNotif = new Notification('notification title',notifOptions);
+        sampleNotif.onclick = (e) => {
+            window.location.href = "https://gnutec.net"
+        }
+     </script>
+ </body>
+ </html>
