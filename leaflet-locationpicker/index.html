@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>leaflet location picker</title>
+	<link rel="stylesheet" href="css/leaflet.css" />
+	<link rel="stylesheet" href="css/leaflet-locationpicker.src.css" />
+</head>
+<body>
+	<p>This Map Picker is work on real host and domain does not worked on localhost properly</p>
+	<input id="map_cordinate" type="text" value="36.285588,59.613533" />	
+	<div id="map_container"></div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/leaflet.js"></script>		
+	<script src="js/leaflet-locationpicker.src.js"></script>
+	<script>
+		$('#map_cordinate').leafletLocationPicker({
+			mapContainer:"#map_container",
+			width:500,
+			height:500,
+			map:{
+				zoom:12,
+			}
+		});
+	</script>
+</body>
+</html>
