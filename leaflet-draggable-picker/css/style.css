@@ -1,0 +1,50 @@
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background: rgba(73,155,234,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(73,155,234,1)), color-stop(100%, rgba(32,124,229,1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5', GradientType=1 );
+}
+
+.example-container {
+  background: white;
+  width: 400px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: helvetica;
+  font-size: 16px;
+  padding: 1.5em;
+  -webkit-box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.15);
+  -moz-box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.15);
+  box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.15);
+  border-radius: 8px;
+}
+
+.example-container * {
+  box-sizing: inherit;
+  font-size: inherit;
+}
+
+.example-container .header {
+  margin: 1em 0;
+}
+
+.example-container #MapLocation {
+  margin-bottom: 0.75em;
+}
+
+.example-container input {
+  width: 100%;
+  margin: 0.5em 0;
+  padding: 0.5em;
+  border: 1px solid #569ae3;
+}
