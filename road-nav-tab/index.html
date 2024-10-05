@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tab road</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+	
+    .rt-nav-content-item {
+        display: none;
+    }
+    .rt-nav-content-item.active {
+        display: block;
+    }
+    .rt-nav .rt-bullet {
+        z-index: 2;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: red;
+        position: absolute;
+        transition: all .4s;
+        border: .5rem solid aliceblue;
+    }
+    @media (min-width: 767px) {
+        .rt-nav {
+            display: flex;
+            width: 100%;
+            position: relative;
+        }
+        .rt-nav-link {
+            width: 25%;
+            height: 100px;
+            background: url('./road-tab.png');
+            background-size: 100% 100%;
+            position: relative;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+        .rt-nav .rt-bullet {
+            top: .5rem;
+        }
+        .rt-nav-link.active .rt-counter {
+            color: red;
+            top: -2rem;
+            transition: all .4s;
+        }
+        .rt-counter {
+            text-align: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: -1.5rem;
+        }
+        .rt-nav-container {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        .rt-nav-container {
+            display: flex;
+            flex-direction: row;
+        }
+        .rt-nav {
+            background: linear-gradient(180deg, rgba(1,0,36,0.1) 0%, rgba(1,0,36,0.6) 35%, rgba(1,0,36,0.1) 100%);
+            width: 1rem;
+            text-align: center;
+            position: relative;
+            min-height: 100vh;
+        }
+        .rt-nav:after{
+            content: '';
+            width: 0;
+            height: 100%;
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 0;
+            border-right: 2px dashed white;
+        }
+        .rt-nav-link {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            height: 15%;
+        }
+        .rt-nav-link.active {
+            height: 55%;
+            color: red;
+        }
+        .rt-nav .rt-bullet {
+            left: -0.5rem;
+        }
+        .rt-counter {
+            text-align: center;
+            position: absolute;
+            left: 1.6rem;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+    }
+    
+	</style>
+</head>
+<body>
+
+    <div class="rt-nav-container">
+        <div class="rt-nav">
+            <div class="rt-bullet"></div>
+            <div class="rt-nav-link active" data-content="#rt_nav_content_first">
+                <div class="rt-counter">۱</div>
+            </div>
+            <div class="rt-nav-link" data-content="#rt_nav_content_second">
+                <div class="rt-counter">۲</div>
+            </div>
+            <div class="rt-nav-link" data-content="#rt_nav_content_third">
+                <div class="rt-counter">۳</div>
+            </div>
+            <div class="rt-nav-link" data-content="#rt_nav_content_fourth">
+                <div class="rt-counter">۴</div>
+            </div>
+        </div>
+        <!-- .rt-nav -->
+        
+        <div class="rt-nav-content">
+            <div id="rt_nav_content_first" class="rt-nav-content-item active">first</div>
+            <div id="rt_nav_content_second" class="rt-nav-content-item">second</div>
+            <div id="rt_nav_content_third" class="rt-nav-content-item">third</div>
+            <div id="rt_nav_content_fourth" class="rt-nav-content-item">fourth</div>
+        </div>
+        <!-- .rt-nav-content -->
+	</div>
+    <!-- .rt-nav-container -->
+	 
+	<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+	<script>
+	
+		jQuery(document).ready(function($){
+
+            function desktopRTDrive(){
+                var bulletWidth = $(".rt-bullet").outerWidth()
+                var activeTabWidth = $(".rt-nav").find(".rt-nav-link.active").outerWidth()
+                var start = $(".rt-nav").find(".active").position().left
+                var bulletPosition = (activeTabWidth/2) - (bulletWidth/2) + start
+                $(".rt-bullet").css({"left":+ bulletPosition })
+            }
+            
+            function mobileRTDrive(){
+                var bulletHeight = $(".rt-bullet").outerHeight()
+                var activeTabHeight = $(".rt-nav").find(".active").outerHeight()
+                var start = $(".rt-nav").find(".active").position().top
+                var bulletPosition = (activeTabHeight/2) - (bulletHeight/2) + start
+                $(".rt-bullet").css({"top": + bulletPosition })
+            }
+            
+            if($(window).width() > 767){
+                desktopRTDrive()
+            }else if($(window).width() < 767){
+                mobileRTDrive()
+            }
+            
+            $(".rt-nav-link").on('click',function(target){
+                let contentQuery = $(this).data('content')
+                $(".rt-nav-content-item").removeClass('active')
+                $(contentQuery).addClass('active')
+                $(".rt-nav-link").removeClass('active')
+                $(this).addClass('active')
+                if($(window).width() > 767){
+                    desktopRTDrive()
+                }else if($(window).width() < 767){
+                    mobileRTDrive()
+                }
+            })
+            
+        })
+        
+	</script>
+</body>
+</html>
