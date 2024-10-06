@@ -141,6 +141,11 @@
             <div id="rt_nav_content_fourth" class="rt-nav-content-item">fourth</div>
         </div>
         <!-- .rt-nav-content -->
+        <div class="rt-nav-arrows">
+            <a href="#" class="rt-nav-arrow-next">Next</a>
+            <a href="#" class="rt-nav-arrow-previous">Previous</a>
+        </div>
+        <!-- .rt-nav-arrows -->
 	</div>
     <!-- .rt-nav-container -->
 	 
@@ -170,6 +175,24 @@
             }else if($(window).width() < 767){
                 mobileRTDrive()
             }
+            
+            $(".rt-nav-arrow-next").on('click',function(e){
+                e.preventDefault()
+                let nextActiveTab = $(".rt-nav").find(".active").next(".rt-nav-link")
+                if(!nextActiveTab.length){
+                    nextActiveTab = $(".rt-nav").find(".rt-nav-link").first()
+                }
+                nextActiveTab.trigger('click')
+            })
+            
+            $(".rt-nav-arrow-previous").on('click',function(e){
+                e.preventDefault()
+                let previousActiveTab = $(".rt-nav").find(".active").prev(".rt-nav-link")
+                if(!previousActiveTab.length){
+                    previousActiveTab = $(".rt-nav").find(".rt-nav-link").last()
+                }
+                previousActiveTab.trigger('click')
+            })
             
             $(".rt-nav-link").on('click',function(target){
                 let contentQuery = $(this).data('content')
